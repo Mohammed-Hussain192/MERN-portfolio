@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import '../styles/About.css';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Loader from '../components/loader';
+
 gsap.registerPlugin(useGSAP);
 
 function About() {
@@ -32,7 +32,7 @@ function About() {
   return (
     <>
     <Navbar />
-      <Loader name="About Me" title="" />
+      
       <div className="about-page">
         
         
