@@ -1,0 +1,231 @@
+/* ===== Container ===== */
+.Homecont {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+/* ===== Layout ===== */
+.cont {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* ===== Form Section ===== */
+form {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.co {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  color: #00d8ff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ===== Inputs & Textarea ===== */
+#input, textarea {
+  width: 100%;
+  min-height: 45px;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 0 12px rgba(0, 216, 255, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+#input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 15px #00d8ff;
+}
+
+/* ===== Submit Button ===== */
+#btn {
+  width: 50%;
+  min-height: 40px;
+  background: #00d8ff;
+  color: #0f2027;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#btn:hover {
+  background: #61dafb;
+  box-shadow: 0 0 15px #00d8ff;
+}
+
+/* ===== Contact Info Below Form ===== */
+.hee {
+  font-size: 1.1rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+
+.emo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: center;
+}
+
+.do {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+  gap: 8px;
+  color: #fff;
+}
+
+.do a {
+  color: #00d8ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.do a:hover {
+  color: #61dafb;
+}
+
+/* ===== Join Section ===== */
+.join {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+.freelancer-card {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(250, 170, 9, 0.9), rgba(255, 214, 102, 0.95));
+  box-shadow: 0 10px 35px rgba(250, 170, 9, 0.4);
+  text-align: center;
+  color: #000;
+}
+
+.freelancer-content h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.freelancer-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.freelancer-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.service-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.service-box i {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-box:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+}
+
+.hire-me-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hire-me-btn:hover {
+  background: #222;
+}
+ 
+
+.j {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #00d8ff;
+}
+
+.join .hee {
+  font-size: 1rem;
+  color: #61dafb;
+  font-style: italic;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .cont {
+    flex-direction: column;
+  }
+
+  #btn {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .co {
+    font-size: 1.6rem;
+  }
+
+  .j {
+    font-size: 1.6rem;
+  }
+
+  .hee {
+    font-size: 1rem;
+  }
+}

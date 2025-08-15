@@ -1,0 +1,56 @@
+import React, { useState } from "react";
+import axios from "axios";
+
+const AddUserForm = () => {
+  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [message, setMessage] = useState(""); // To store success/error messages
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5000/addUser", formData);
+
+      if (response.data.success) {
+        setMessage(response.data.message); // Show success message
+      } else {
+        setMessage("Something went wrong");
+      }
+
+      setFormData({ name: "", email: "" }); // Reset form after success
+    } catch (error) {
+      setMessage(error.response?.data?.message || "Error submitting form");
+    }
+  };
+
+  return (
+    <div>
+      <h2>Register User</h2>
+      {message && <p>{message}</p>} {/* Display response message */}
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+};
+
+export default AddUserForm;
