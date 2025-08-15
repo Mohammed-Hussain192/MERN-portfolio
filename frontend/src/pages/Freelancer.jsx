@@ -1,6 +1,6 @@
 import React from "react";
 import { FaReact, FaNodeJs, FaDatabase, FaEnvelope, FaLaptopCode, FaCloud, FaMobileAlt, FaProjectDiagram } from "react-icons/fa";
-import "../styles/Freelancer.css";
+import "../styles/freelancer.css";
 import {Link } from 'react-router-dom';
 import Navbar from "../components/Navbar";
 
