@@ -71,8 +71,8 @@ const Home = () => {
 
               {/* === CALL TO ACTION BUTTONS === */}
               <div className="cta-buttons">
-                <a href="/projects" className="btn btn-primary">View My Work</a>
-                <a href="/contact" className="btn btn-secondary">Contact Me</a>
+                <a href="/Projects" className="btn btn-primary">View My Work</a>
+                <a href="/Contact" className="btn btn-secondary">Contact Me</a>
               </div>
 
               {/* === SOCIAL LINKS === */}
