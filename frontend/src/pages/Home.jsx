@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Home.css';
 import profilePhoto from '../assets/me.png'; // Ensure path is correct
 import Navbar from '../components/Navbar';
+import {Link} from 'react-router-dom';
 
 const roles = [
   "MERN Stack Developer",
@@ -71,8 +72,8 @@ const Home = () => {
 
               {/* === CALL TO ACTION BUTTONS === */}
               <div className="cta-buttons">
-                <a href="/Projects" className="btn btn-primary">View My Work</a>
-                <a href="/Contact" className="btn btn-secondary">Contact Me</a>
+                <Link to="/Projects" className="btn btn-primary">View My Work</Link>
+                <Link to ="/Contact" className="btn btn-secondary">Contact Me</Link>
               </div>
 
               {/* === SOCIAL LINKS === */}
