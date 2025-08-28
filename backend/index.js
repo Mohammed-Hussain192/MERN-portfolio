@@ -4,6 +4,7 @@ const User = require('./models/users'); // renamed from response to User
 const cors = require('cors');
 
 const app = express();
+const dotenv = require('dotenv');
 
 app.use(express.json());
 
