@@ -2,8 +2,11 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import '../styles/About.css';
 import gsap from "gsap";
+
 import { useGSAP } from "@gsap/react";
-import Loader from '../components/loader';
+import Particles from '../components/Orb';
+
+
 gsap.registerPlugin(useGSAP);
 
 function About() {
@@ -31,12 +34,27 @@ function About() {
 
   return (
     <>
-    <Navbar />
-      <Loader name="About Me" title="" />
+     <Navbar />
+   
+      
       <div className="about-page">
+         <div className="orb-container">
+       <Particles
+    particleColors={['#000000ff', '#ff1212ff']}
+    particleCount={700}
+    particleSpread={10}
+    speed={0.3}
+    particleBaseSize={100}
+    moveParticlesOnHover={true}
+    alphaParticles={true}
+    disableRotation={false}
+  />
+      </div>
+        
         
         
         <main className="about-container">
+          
           {/* About Me Section */}
           <section className="about-section">
             <h2 className="section-title">About Me</h2>

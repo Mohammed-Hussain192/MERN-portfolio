@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Home.css';
 import profilePhoto from '../assets/me.png'; // Ensure path is correct
 import Navbar from '../components/Navbar';
+import SplineSce from '@splinetool/react-spline';
+import Particles from '../components/Orb';
+
 
 const roles = [
   "MERN Stack Developer",
@@ -45,11 +48,25 @@ const Home = () => {
 
   return (
     <div className='bap'>
+      {/* Orb container with absolute positioning */}
+      <div className="orb-container">
+       <Particles
+    particleColors={['#000000ff', '#ff1212ff']}
+    particleCount={700}
+    particleSpread={10}
+    speed={0.3}
+    particleBaseSize={100}
+    moveParticlesOnHover={true}
+    alphaParticles={true}
+    disableRotation={false}
+  />
+      </div>
+      
       <Navbar/>
+      
       <section id="home" className="home-section">
         <div className="container">
           <div className="home-content">
-
             {/* === LEFT TEXT CONTENT === */}
             <div className="home-text">
               <h1 className="greeting">
@@ -66,9 +83,6 @@ const Home = () => {
                 Passionate about full-stack development, open-source, and AI innovations.
               </p>
 
-              {/* === Quick Highlights === */}
-              
-
               {/* === CALL TO ACTION BUTTONS === */}
               <div className="cta-buttons">
                 <a href="/projects" className="btn btn-primary">View My Work</a>
@@ -83,18 +97,9 @@ const Home = () => {
                 <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-linkedin"></i>
                 </a>
-                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-twitter"></i>
-                </a>
+               
               </div>
-
-              {/* === Stats Section === */}
-              
             </div>
-
-            {/* === RIGHT IMAGE CONTENT === */}
-           
-
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 /* ===== PROJECTS PAGE ===== */
 .projects-page {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 4rem;
@@ -22,7 +22,7 @@
 .projects-title {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #00d8ff;
+  color: #373838;
   margin-bottom: 0.5rem;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -30,7 +30,7 @@
 
 .projects-subtitle {
   font-size: 1.15rem;
-  color: #cfefff;
+  color: #121212;
   max-width: 700px;
   margin: 0 auto;
   font-weight: 400;
@@ -70,7 +70,7 @@
 .project-name {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #00d8ff;
+  color: #000000;
   margin-bottom: 1rem;
   letter-spacing: 0.8px;
 }
@@ -82,7 +82,7 @@
 
 .github-link, .live-demo-link {
   background: #007bff;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 0.4rem 0.8rem;
   text-align: center;
   border-radius: 30px;
@@ -96,14 +96,14 @@
 }
 
 .github-coming-soon, .live-demo-coming-soon {
-  color: gray;
+  color: rgb(0, 0, 0);
   font-style: italic;
 }
 
 .project-summary {
   font-size: 1rem;
    margin-bottom: 1.5rem;
-  color: #e6faff;
+  color: #0b0b0b;
   margin-bottom: 1.5rem;
   line-height: 1.5;
 }
@@ -115,7 +115,7 @@
 }
 
 .tech-stack h3 {
-  color: #61dafb;
+  color: #050505;
   font-size: 1.15rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
@@ -126,18 +126,18 @@
   position: relative; 
   font-family: 'Courier New', monospace;
   font-size: 0.9rem;
-  background: rgba(0, 216, 255, 0.08);
+  background: rgba(19, 217, 243, 0.255);
   padding: 1rem;
   border-radius: 8px;
   white-space: pre-wrap;
   line-height: 1.4;
-  color: #b9e7f5;
+  color: #000000;
 }
 
 /* ===== Toggle Button ===== */
 .toggle-details {
-  background: rgba(0, 216, 255, 0.2);
-  color: #fff;
+  background: rgba(81, 6, 209, 0.627);
+  color: #ffffff;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
@@ -167,7 +167,7 @@
 }
 
 .details-section h3 {
-  color: #61dafb;
+  color: #000000;
   font-size: 1.15rem;
   margin-bottom: 0.75rem;
   font-weight: 700;
@@ -177,7 +177,7 @@
 .highlights-list {
   list-style: none;
   padding-left: 1.3em;
-  color: #d1f6ff;
+  color: #000000;
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -192,7 +192,7 @@
 .features-list li::before,
 .highlights-list li::before {
   content: "•";
-  color: #00d8ff;
+  color: #000000;
   position: absolute;
   left: 0;
   font-size: 1.2rem;
@@ -208,7 +208,7 @@
 .github-link {
   display: inline-block;
   background: rgba(0, 216, 255, 0.2);
-  color: #fff;
+  color: #000000;
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
   font-weight: 700;

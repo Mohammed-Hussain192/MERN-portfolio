@@ -3,7 +3,7 @@
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+ 
   padding: 60px 20px;
   box-sizing: border-box;
 }
@@ -84,7 +84,7 @@ form {
 /* ===== Contact Info Below Form ===== */
 .hee {
   font-size: 1.1rem;
-  color: #fff;
+  color: #111111;
   text-align: center;
   font-weight: 600;
 }
@@ -102,11 +102,11 @@ form {
   font-weight: 600;
   font-size: 1rem;
   gap: 8px;
-  color: #fff;
+  color: #000000;
 }
 
 .do a {
-  color: #00d8ff;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s ease;
 }

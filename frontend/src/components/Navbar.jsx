@@ -24,9 +24,10 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-container">
+        <h3>Mohammed Hussain</h3>
         
         {/* Minimal Logo Icon (No Name) */}
-        <div className="logo-icon"></div>
+        <div className="logo-icon"> </div>
 
         {/* Hamburger Icon */}
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>

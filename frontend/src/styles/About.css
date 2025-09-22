@@ -1,7 +1,7 @@
 /* Base About Page Styling */
 .about-page {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
+  
+  color: #161616;
   min-height: 100vh;
   padding: 80px 20px;
   position: relative;
@@ -31,20 +31,11 @@
   margin-bottom: 20px;
   position: relative;
   display: inline-block;
-  color: #00d8ff;
+  color: #000000;
   font-weight: 700;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #00d8ff, #61dafb);
-  border-radius: 3px;
-}
+
 
 .section-content {
   background: rgba(255, 255, 255, 0.03);
@@ -112,7 +103,7 @@
 }
 
 .skill-category h3 {
-  color: #61dafb;
+  color: #000000;
   margin-bottom: 10px;
 }
 

@@ -1,62 +1,63 @@
-.bap{
-   overflow: hidden;
+/* Home.css */
+
+/* Base styles */
+.bap {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.019);
 }
+
+
+/* Home section styling */
 .home-section {
+  padding: 2rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
- 
-  padding: 60px 0;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
+  justify-content: center;
   position: relative;
-  overflow: hidden;
-}
-
-.home-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('../assets/bg-pattern.png') repeat;
-  opacity: 0.05;
-  z-index: 0;
+  z-index: 2;
 }
 
 .container {
-  width: 100%;
-   overflow: hidden;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
-  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-   overflow: hidden;
+  gap: 3rem;
+  background:rgba(255, 255, 255, 0);
+  width: 50%;
 }
 
-/* === Left Text === */
+/* Text content styling */
 .home-text {
-  flex: 1;
-  min-width: 300px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .greeting {
   font-size: 2.5rem;
-  margin-bottom: 15px;
   font-weight: 700;
-  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
 }
 
 .name-highlight {
-  color: #00d8ff;
+  color: #4299e1;
   position: relative;
+  display: inline-block;
 }
 
 .name-highlight::after {
@@ -66,33 +67,25 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #00d8ff, #61dafb);
-  border-radius: 3px;
+  background: linear-gradient(90deg, #4299e1, #667eea);
+  border-radius: 2px;
 }
 
-/* === Typewriter Text === */
 .dynamic-text {
-  font-size: 2rem;
+  min-height: 60px;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 20px;
-  height: 40px;
-  color: #61dafb00;
-  display: flex;
-  align-items: center;
+  color: #4a5568;
 }
 
 .typed-text {
-  color: #61dafb;
-  border-right: 6px solid white;
+  color: #4299e1;
 }
 
 .cursor {
-  display: inline-block;
-  width: 3px;
-  height: 30px;
-  
-  margin-left: 5px;
   animation: blink 1s infinite;
+  color: #4299e1;
 }
 
 @keyframes blink {
@@ -100,171 +93,208 @@
   50% { opacity: 0; }
 }
 
-/* === Bio === */
 .bio {
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 30px;
+  color: #718096;
+  margin-bottom: 2rem;
   max-width: 600px;
-  opacity: 0.9;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* === Buttons === */
+/* Quick highlights styling */
+.quick-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.highlight-item {
+  background: #f7fafc;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #4299e1;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.highlight-item i {
+  font-size: 0.8rem;
+}
+
+/* CTA buttons styling */
 .cta-buttons {
   display: flex;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .btn {
-  padding: 12px 25px;
+  padding: 0.8rem 1.8rem;
   border-radius: 30px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
   display: inline-block;
+  text-align: center;
 }
 
 .btn-primary {
-  background: #00d8ff;
-  color: #0f2027;
-  box-shadow: 0 4px 15px rgba(0, 216, 255, 0.3);
+  background: #4299e1;
+  color: white;
+  border: 2px solid #4299e1;
 }
 
 .btn-primary:hover {
-  background: #61dafb;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 216, 255, 0.4);
+  background: #3182ce;
+  border-color: #3182ce;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(66, 153, 225, 0.3);
 }
 
 .btn-secondary {
-  border: 2px solid #00d8ff;
-  color: #00d8ff;
+  background: transparent;
+  color: #4299e1;
+  border: 2px solid #4299e1;
 }
 
 .btn-secondary:hover {
-  background: rgba(0, 216, 255, 0.1);
-  transform: translateY(-3px);
+  background: rgba(66, 153, 225, 0.1);
+  transform: translateY(-2px);
 }
 
-/* === Social Links === */
+/* Social links styling */
 .social-links {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .social-links a {
-  color: #fff;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f7fafc;
+  color: #4299e1;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
 }
 
 .social-links a:hover {
-  color: #00d8ff;
-  transform: translateY(-3px);
-}
-
-/* === Right Image === */
-.home-image {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  justify-content: center;
-}
-
-.image-wrapper {
-  position: relative;
-  max-width: 350px;
-}
-
-.profile-photo {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border: 5px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.5s ease;
-  transform-origin: center;
-}
-
-.profile-photo:hover {
-  transform: scale(1.03);
-  border-color: rgba(0, 216, 255, 0.3);
-}
-
-/* === Tech Stack Badges === */
-.tech-stack {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-}
-
-.tech-icon {
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  background: #4299e1;
   color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(66, 153, 225, 0.3);
 }
 
-.tech-icon.react {
-  background: linear-gradient(90deg, #61dafb, #00d8ff);
+/* Stats section styling */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
-.tech-icon.node {
-  background: linear-gradient(90deg, #68a063, #3c873a);
+.stat-item {
+  text-align: center;
+  padding: 1rem;
 }
 
-.tech-icon.python {
-  background: linear-gradient(90deg, #3776ab, #ffd43b);
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4299e1;
+  margin-bottom: 0.5rem;
 }
 
-.tech-icon.ai {
-  background: linear-gradient(90deg, #744da9, #ff4d4d);
+.stat-label {
+  font-size: 0.9rem;
+  color: #718096;
 }
 
-/* === Responsive Design === */
-@media (max-width: 768px) {
+/* Responsive design */
+@media (min-width: 768px) {
   .home-content {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    align-items: center;
   }
+  
+  .home-text {
+    text-align: left;
+    margin: 0;
+  }
+  
+  .cta-buttons, .social-links {
+    justify-content: flex-start;
+  }
+  
+  .quick-highlights {
+    justify-content: flex-start;
+  }
+  
+  .bio {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-section {
+    padding: 1rem;
+  }
+  
   .greeting {
     font-size: 2rem;
   }
+  
   .dynamic-text {
     font-size: 1.5rem;
-    justify-content: center;
+    min-height: 50px;
   }
-  .bio {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  
   .cta-buttons {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-  .social-links {
-    justify-content: center;
-  }
-  .image-wrapper {
-    margin-top: 40px;
+  
+  .btn {
+    width: 200px;
   }
 }
 
-@media (max-width: 480px) {
-  .greeting {
-    font-size: 1.8rem;
+/* Animation for fade-in effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .dynamic-text {
-    font-size: 1.3rem;
-  }
-  .btn {
-    padding: 10px 20px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+.home-text > * {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.home-text > *:nth-child(1) { animation-delay: 0.1s; }
+.home-text > *:nth-child(2) { animation-delay: 0.2s; }
+.home-text > *:nth-child(3) { animation-delay: 0.3s; }
+.home-text > *:nth-child(4) { animation-delay: 0.4s; }
+.home-text > *:nth-child(5) { animation-delay: 0.5s; }
+.home-text > *:nth-child(6) { animation-delay: 0.6s; }
