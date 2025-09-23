@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import { Phone, Mail, Linkedin, Github } from "lucide-react";
+import { Phone, Mail, Linkedin, Github, Loader } from "lucide-react";
 import axios from 'axios';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // import styles
+import 'react-toastify/dist/ReactToastify.css';
 import '../styles/contact.css';
 import Particles from '../components/Orb';
-Particles
 
 gsap.registerPlugin(useGSAP);
 
 function Contacts() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useGSAP(() => {
     gsap.fromTo(".Homecont", { height: 0, opacity: 0 }, { height: "100vh", opacity: 1, duration: 1 });
     gsap.fromTo("#input", { x: 101, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, stagger: 0.2, delay: 1 });
@@ -24,118 +25,137 @@ function Contacts() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const onSubmit = async (data) => {
+    setIsSubmitting(true);
     try {
       const response = await axios.post("https://mern-backend-ee1e.onrender.com/addUser", data);
       toast.success(response.data.message || "Message sent successfully!");
       reset();
     } catch (error) {
-      toast.error("Error adding user");
+      toast.error(error.response?.data?.message || "Error sending message");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="Homecont">
-         <div className="orb-container">
-       <Particles
-    particleColors={['#000000ff', '#ff1212ff']}
-    particleCount={700}
-    particleSpread={10}
-    speed={0.3}
-    particleBaseSize={100}
-    moveParticlesOnHover={true}
-    alphaParticles={true}
-    disableRotation={false}
-  />
-      </div>
-      
-      <div className="cont">
-        <form onSubmit={handleSubmit(onSubmit)} noValidate>
-          <h2 className="co">Contact</h2>
-
-          <input
-            id="input"
-            placeholder="Enter Your Name"
-            {...register("name", { required: "Name is required" })}
+        <div className="orb-container">
+          <Particles
+            particleColors={['#000000ff', '#ff1212ff']}
+            particleCount={700}
+            particleSpread={10}
+            speed={0.3}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={true}
+            disableRotation={false}
           />
-          {errors.name && <p className="error">{errors.name.message}</p>}
+        </div>
+        
+        <div className="cont">
+          <form onSubmit={handleSubmit(onSubmit)} noValidate>
+            <h2 className="co">Contact</h2>
 
-          <input
-            type="email"
-            id="input"
-            placeholder="Enter Your Email"
-            {...register("email", {
-              required: "Email is required",
-              pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" }
-            })}
-          />
-          {errors.email && <p className="error">{errors.email.message}</p>}
+            <input
+              id="input"
+              placeholder="Enter Your Name"
+              {...register("name", { required: "Name is required" })}
+              disabled={isSubmitting}
+            />
+            {errors.name && <p className="error">{errors.name.message}</p>}
 
-          <textarea
-            id="input"
-            placeholder="Enter Your Message"
-            rows={4}
-            {...register("message", { required: "Message is required" })}
-          ></textarea>
-          {errors.message && <p className="error">{errors.message.message}</p>}
+            <input
+              type="email"
+              id="input"
+              placeholder="Enter Your Email"
+              {...register("email", {
+                required: "Email is required",
+                pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" }
+              })}
+              disabled={isSubmitting}
+            />
+            {errors.email && <p className="error">{errors.email.message}</p>}
 
-          <input type="submit" id="btn" value="Send" />
+            <textarea
+              id="input"
+              placeholder="Enter Your Message"
+              rows={4}
+              {...register("message", { required: "Message is required" })}
+              disabled={isSubmitting}
+            ></textarea>
+            {errors.message && <p className="error">{errors.message.message}</p>}
 
-          <p className="hee">More To Contact ▼</p>
-          <div className="emo">
-            <p className="do">
-              <Mail /> <span>sahilsahu7816@gmail.com</span>
-            </p>
-            <p className="do">
-              <Phone /> <a href="tel:9019274981">9019274981</a>
-            </p>
-            <p className="do">
-              <Linkedin />
-              <a
-                href="https://www.linkedin.com/in/mohammed-hussain-484026260/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Mohammed Hussain
-              </a>
-            </p>
-            <p className="do">
-              <Github />
-              <a
-                href="https://github.com/Mohammed-Hussain192"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Mohammed-Hussain192
-              </a>
+            <button 
+              type="submit" 
+              id="btn" 
+              disabled={isSubmitting}
+              className={isSubmitting ? "submitting" : ""}
+            >
+              {isSubmitting ? (
+                <>
+                  <Loader className="spinner" />
+                  Sending...
+                </>
+              ) : (
+                "Send"
+              )}
+            </button>
+
+            <p className="hee">More To Contact ▼</p>
+            <div className="emo">
+              <p className="do">
+                <Mail /> <span>sahilsahu7816@gmail.com</span>
+              </p>
+              <p className="do">
+                <Phone /> <a href="tel:9019274981">9019274981</a>
+              </p>
+              <p className="do">
+                <Linkedin />
+                <a
+                  href="https://www.linkedin.com/in/mohammed-hussain-484026260/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Mohammed Hussain
+                </a>
+              </p>
+              <p className="do">
+                <Github />
+                <a
+                  href="https://github.com/Mohammed-Hussain192"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Mohammed-Hussain192
+                </a>
+              </p>
+            </div>
+          </form>
+
+          <div className="join">
+            <h1 className="j">Join us</h1>
+            <p className="hee">
+              "Alone we can do so little; together we can do so much." <br />
+              – Helen Keller
             </p>
           </div>
-        </form>
-
-        <div className="join">
-          <h1 className="j">Join us</h1>
-          <p className="hee">
-            "Alone we can do so little; together we can do so much." <br />
-            – Helen Keller
-          </p>
         </div>
-      </div>
 
-      {/* Add ToastContainer once in your app (here in this component is fine) */}
-      <ToastContainer 
-        position="top-right" 
-        autoClose={3000} 
-        hideProgressBar={false} 
-        newestOnTop={false} 
-        closeOnClick 
-        rtl={false} 
-        pauseOnFocusLoss 
-        draggable 
-        pauseOnHover 
-        theme="colored" 
-      />
-    </div>
+        <ToastContainer 
+          position="top-right" 
+          autoClose={3000} 
+          hideProgressBar={false} 
+          newestOnTop={false} 
+          closeOnClick 
+          rtl={false} 
+          pauseOnFocusLoss 
+          draggable 
+          pauseOnHover 
+          theme="colored" 
+        />
+      </div>
     </>
   );
 }
