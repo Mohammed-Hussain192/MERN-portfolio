@@ -4,15 +4,21 @@ const User = require('./models/users'); // renamed from response to User
 const cors = require('cors');
 
 const app = express();
+const dotenv = require('dotenv');
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 
-
-const corsOptions = {
-  origin: ["http://localhost:5173"],
-};
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: "https://mohammed-hussain.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 app.post("/addUser", async (req, res) => {
   try {

@@ -28,15 +28,16 @@ APIs/Libraries: Compiler API integration, Axios`,
         "Integrated error parsing for better debugging",
         "Designed with scalability in mind for future language support"
       ],
-      github: "hello/github",
-      live_demo:"hrjjhjkjfvjkd"
+      github: "https://github.com/Mohammed-Hussain192/CodeFlow",
+      live_demo:"https://codeflow-1n7e.onrender.com"
     },
     {
-      title: "Time Pass AI – Fun AI for Kids",
+      title: "NEXUS  AI ",
       summary: `A playful AI chatbot designed for children to interact with safely. Encourages creativity, curiosity, and fun through lighthearted conversations.`,
       tech: `Frontend: React.js
-Backend: Python (Flask for API version)
-APIs: OpenAI API / AI conversation engine`,
+Backend: Node.js, Express.js
+Database: MongoDB
+APIs: Gemini API`,
       features: [
         "Child-friendly conversational responses",
         "Supports both web and console versions",
@@ -48,7 +49,8 @@ APIs: OpenAI API / AI conversation engine`,
         "Custom personality training for a playful tone",
         "Responsive design for tablets and mobile devices"
       ],
-      github: ""
+      github: "https://github.com/Mohammed-Hussain192/NexusAI",
+      live_demo:"https://nexusai-client.onrender.com"
     },
     {
       title: "Pinterest Clone",
@@ -68,15 +70,16 @@ Libraries: Multer for file uploads`,
         "GSAP-based animated transitions",
         "Clean, minimal Pinterest-inspired UI"
       ],
-      github: ""
+      github: "https://github.com/Mohammed-Hussain192/Pinterest",
+      live_demo:"https://pinterest-by-mohammed.onrender.com"
     },
     {
       title: "BagHub – MERN E-commerce Bag Store",
       summary: `A full-stack e-commerce platform focused on selling bags with a modern interface, product filtering, and secure checkout.`,
-      tech: `Frontend: React.js, Tailwind CSS, GSAP
+      tech: `Frontend: React.js, GSAP
 Backend: Node.js, Express.js
 Database: MongoDB
-Payment: Stripe API`,
+`,
       features: [
         "User authentication & profile management",
         "Product search, filter, and sort",
@@ -88,7 +91,8 @@ Payment: Stripe API`,
         "Optimized API routes for faster product loading",
         "SEO-friendly product pages"
       ],
-      github: ""
+      github: "https://github.com/Mohammed-Hussain192/Baghub",
+      live_demo:"https://baghub-cli.onrender.com"
     },
     {
       title: "Pack-Me – E-commerce Website",
@@ -107,7 +111,8 @@ Database: MongoDB`,
         "Minimal yet elegant user interface",
         "Reusable React components for scalability"
       ],
-      github: ""
+      github: "https://github.com/Mohammed-Hussain192/PackMe-finall",
+      live_demo:"https://packme.onrender.com"
     },
     {
       title: "Jarvis AI – Personal Assistant",
@@ -125,7 +130,7 @@ Libraries: SpeechRecognition, pyttsx3, smtplib, webbrowser`,
         "Task execution speed optimized",
         "Expandable architecture for future skills"
       ],
-      github: ""
+      github: "https://github.com/Mohammed-Hussain192/jarvis-AI"
     },
     {
       title: "Tesla Clone",
@@ -159,7 +164,8 @@ Libraries: SpeechRecognition, pyttsx3, smtplib, webbrowser`,
         "Responsive across devices",
         "Lightweight and fast-loading"
       ],
-      github: ""
+      github: "https://github.com/Mohammed-Hussain192/Amazon-Clone-Front-end",
+
     },
     {
       title: "YouTube Clone",
@@ -180,41 +186,8 @@ Database: MongoDB`,
       ],
       github: ""
     },
-    {
-      title: "Attendify Landing Page",
-      summary: `A GSAP-powered animated landing page with multiple theme options.`,
-      tech: `Frontend: HTML, CSS, JavaScript, GSAP`,
-      features: [
-        "Theme switching functionality",
-        "Smooth animations and parallax effects",
-        "Responsive design",
-        "Optimized asset loading"
-      ],
-      highlights: [
-        "Custom GSAP animation sequences",
-        "Performance-optimized animations",
-        "Cross-browser compatibility"
-      ],
-      github: ""
-    },
-    {
-      title: "Food Recipe Project",
-      summary: `A recipe browsing app with search, filters, and detailed cooking instructions.`,
-      tech: `Frontend: React.js
-APIs: Spoonacular API`,
-      features: [
-        "Search recipes by ingredient or name",
-        "Filter by cuisine or dietary needs",
-        "Detailed recipe steps & ingredients",
-        "Responsive layout"
-      ],
-      highlights: [
-        "API integration with caching for speed",
-        "Mobile-friendly cooking guide view",
-        "Clean card-based UI"
-      ],
-      github: ""
-    },
+    
+    
     {
       title: "MERN Stack Portfolio",
       summary: `A personal portfolio showcasing skills, projects, and contact form with backend integration.`,
@@ -232,7 +205,8 @@ Database: MongoDB`,
         "Easy to update with new projects",
         "SEO-friendly structure"
       ],
-      github: ""
+      github: "https://github.com/Mohammed-Hussain192/MERN-portfolio",
+      live_demo:"https://mohammed-hussain.onrender.com"
     },
     {
   title: "StockSense – Real-Time Stock Market Analysis Platform",
@@ -253,8 +227,8 @@ APIs: Alpha Vantage API / Yahoo Finance API`,
     "Secure user authentication and data privacy",
     "Scalable architecture to handle high-frequency data updates"
   ],
-  github: "",
-  live_demo : ""
+  github: "https://github.com/Mohammed-Hussain192/StockSense",
+  live_demo : "https://stocksense-vi6h.onrender.com"
 }
   ];
 
