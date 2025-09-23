@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 import SplineSce from '@splinetool/react-spline';
 import Particles from '../components/Orb';
 
-
 const roles = [
   "MERN Stack Developer",
   "Full Stack Developer",
@@ -50,16 +49,16 @@ const Home = () => {
     <div className='bap'>
       {/* Orb container with absolute positioning */}
       <div className="orb-container">
-       <Particles
-    particleColors={['#000000ff', '#ff1212ff']}
-    particleCount={700}
-    particleSpread={10}
-    speed={0.3}
-    particleBaseSize={100}
-    moveParticlesOnHover={true}
-    alphaParticles={true}
-    disableRotation={false}
-  />
+        <Particles
+          particleColors={['#000000ff', '#ff1212ff']}
+          particleCount={700}
+          particleSpread={10}
+          speed={0.3}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={true}
+          disableRotation={false}
+        />
       </div>
       
       <Navbar/>
@@ -97,8 +96,12 @@ const Home = () => {
                 <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-linkedin"></i>
                 </a>
-               
               </div>
+            </div>
+
+            {/* === RIGHT IMAGE CONTENT === */}
+            <div className="home-image">
+              <img src={profilePhoto} alt="Mohammed Hussain" className="profile-photo" />
             </div>
           </div>
         </div>
