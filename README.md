@@ -1,39 +1,28 @@
-# 🤖 NEXUS AI – Intelligent Chat Bot
+# 💼 MERN Portfolio – Personal Developer Website
 
-NEXUS AI is an advanced conversational AI chatbot designed to interact intelligently with users in real time.  
-It is built using **React (Frontend)** and **Node.js/Express (Backend)** with API integration for AI responses — similar to ChatGPT or Gemini, but custom-built for personalized experiences.
+This is my personal **portfolio website** built using the **MERN stack (MongoDB, Express, React, Node.js)**.  
+It showcases my **projects, skills, certifications, and achievements** in an interactive and visually appealing way with **GSAP animations** and a **modern responsive UI**.
 
 ---
 
 ## 🚀 Features
 
-- 💬 Real-time chatbot responses  
-- 🧠 AI-powered text generation using API integration  
-- 🌐 Interactive and modern user interface  
-- ⚙️ Backend powered by Node.js and Express  
-- 🔒 Secure API key handling  
-- ⚡ Fast response and minimal latency  
-- 🎨 Clean UI with animations (using GSAP or Framer Motion)  
-- 🧩 Modular and scalable MERN structure
+- 🧑‍💻 Showcases projects with live demo and GitHub links  
+- 🎓 Displays certifications and achievements  
+- 📱 Fully responsive design for all screen sizes  
+- ⚡ Smooth animations using GSAP  
+- 🧭 Dynamic routing and navigation  
+- 💬 Contact form to reach me directly  
+- 🌙 Light/Dark mode (optional customization)
 
 ---
 
 ## 🧩 Tech Stack
 
-**Frontend:** React.js, Tailwind CSS / CSS3, Axios, GSAP (animations)  
+**Frontend:** React.js, CSS3, GSAP (for animations)  
 **Backend:** Node.js, Express.js  
-**AI Integration:** Gemini API / OpenAI API (customizable)  
-**Hosting:** Vercel / Render  
-
----
-
-## 🧠 How It Works
-
-1. The frontend captures user input.  
-2. The message is sent to the backend through Axios or Fetch.  
-3. The backend connects to the AI API using the provided key.  
-4. The API processes the input and returns a response.  
-5. The response is rendered dynamically on the frontend with smooth UI effects.
+**Database:** MongoDB  
+**Hosting:** Vercel (Frontend), Render / MongoDB Atlas (Backend & DB)  
 
 ---
 
@@ -41,16 +30,18 @@ It is built using **React (Frontend)** and **Node.js/Express (Backend)** with AP
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/nexus-ai.git
+git clone https://github.com/yourusername/mern-portfolio.git
 
-# Navigate into the project
-cd nexus-ai
+# Navigate into the project folder
+cd mern-portfolio
 
-# Install dependencies for frontend and backend
-cd client
-npm install
-cd ../server
+# Install backend dependencies
+cd server
 npm install
 
-# Start the servers
+# Install frontend dependencies
+cd ../client
+npm install
+
+# Run both servers
 npm run dev
