@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": ".",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,6 +16,7 @@
     "@react-three/fiber": "^9.3.0",
     "@splinetool/react-spline": "^4.1.0",
     "@splinetool/runtime": "^1.10.48",
+    "animejs": "^4.2.2",
     "axios": "^1.7.9",
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
