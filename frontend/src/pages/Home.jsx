@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Home.css';
 import profilePhoto from '../assets/me.png'; // Ensure path is correct
 import Navbar from '../components/Navbar';
+<<<<<<< HEAD
 import SplineSce from '@splinetool/react-spline';
 import Particles from '../components/Orb';
+=======
+import {Link} from 'react-router-dom';
+>>>>>>> fa494cbc4902e97cf30b85876b88915333e7db16
 
 const roles = [
   "MERN Stack Developer",
@@ -84,8 +88,8 @@ const Home = () => {
 
               {/* === CALL TO ACTION BUTTONS === */}
               <div className="cta-buttons">
-                <a href="/projects" className="btn btn-primary">View My Work</a>
-                <a href="/contact" className="btn btn-secondary">Contact Me</a>
+                <Link to="/Projects" className="btn btn-primary">View My Work</Link>
+                <Link to ="/Contact" className="btn btn-secondary">Contact Me</Link>
               </div>
 
               {/* === SOCIAL LINKS === */}
@@ -96,6 +100,10 @@ const Home = () => {
                 <a href="https://www.linkedin.com/in/mohammed-hussain-484026260/" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-linkedin"></i>
                 </a>
+<<<<<<< HEAD
+=======
+               
+>>>>>>> fa494cbc4902e97cf30b85876b88915333e7db16
               </div>
             </div>
 

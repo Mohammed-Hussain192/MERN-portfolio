@@ -4,8 +4,11 @@ import '../styles/About.css';
 import gsap from "gsap";
 
 import { useGSAP } from "@gsap/react";
+<<<<<<< HEAD
 import Particles from '../components/Orb';
 
+=======
+>>>>>>> fa494cbc4902e97cf30b85876b88915333e7db16
 
 gsap.registerPlugin(useGSAP);
 
@@ -34,8 +37,12 @@ function About() {
 
   return (
     <>
+<<<<<<< HEAD
      <Navbar />
    
+=======
+    <Navbar />
+>>>>>>> fa494cbc4902e97cf30b85876b88915333e7db16
       
       <div className="about-page">
          <div className="orb-container">
