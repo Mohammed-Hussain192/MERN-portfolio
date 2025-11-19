@@ -1,13 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
 import { FaReact, FaNodeJs, FaDatabase, FaEnvelope, FaLaptopCode, FaCloud, FaMobileAlt, FaProjectDiagram, FaArrowRight } from "react-icons/fa";
 import "../styles/freelancer.css";
 import { Link } from 'react-router-dom';
-=======
-import { FaReact, FaNodeJs, FaDatabase, FaEnvelope, FaLaptopCode, FaCloud, FaMobileAlt, FaProjectDiagram } from "react-icons/fa";
-import "../styles/freelancer.css";
-import {Link } from 'react-router-dom';
->>>>>>> fa494cbc4902e97cf30b85876b88915333e7db16
 import Navbar from "../components/Navbar";
 
 const Freelancer = () => {
