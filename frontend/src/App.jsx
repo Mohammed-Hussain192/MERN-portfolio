@@ -17,12 +17,12 @@ function App() {
     
       <Routes>
         
-        <Route  path="/" element={<Home />}  />
-        <Route path="/about" element={<About />}  />
-        <Route path="/Projects" element={<Projects />}  />
-        <Route path='/freelancer' element={<Freelancer/>}></Route>
-        <Route path="/Contact" element={<Contacts />}  />
-     
+        <Route path="/" element={<Home />} />
+<Route path="/about" element={<About />} />
+<Route path="/projects" element={<Projects />} />
+<Route path="/freelancer" element={<Freelancer />} />
+<Route path="/contact" element={<Contacts />} />
+
       </Routes>
     </Router>
   );
